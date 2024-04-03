@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onglets</title>
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        background-image: url('background.jpg'); /* Ajout de l'image de fond */
+        background-size: cover; /* Ajustement de la taille de l'image */
+        background-position: center; /* Centrage de l'image */
+    }
+
+    /* Style des onglets */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    .tab button {
+        background-color: transparent;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        transition: background-color 0.3s;
+        border-radius: 5px 5px 0 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .tab button:hover {
+        background-color: #f2f2f2;
+    }
+
+    .tab button.active {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    /* Contenu des onglets */
+    .tabcontent {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        background-color: #fff;
+    }
+
+    /* Style du bouton Télécharger */
+    .btn-download {
+        background-color: #28a745;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        display: inline-block;
+    }
+
+    .btn-download:hover {
+        background-color: #218838;
+    }
+
+    /* Style des titres */
+    h1, h2, h3 {
+        color: #007bff;
+        margin-bottom: 10px;
+    }
+
+    /* Style des paragraphes */
+    p {
+        line-height: 1.5;
+        color: #555;
+    }
+
+    /* Style des images */
+    img, video {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    /* Style du lien Instagram */
+    .instagram-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .instagram-link a {
+        background-color: #e4405f;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .instagram-link a:hover {
+        background-color: #d1304f;
+    }
+
+    /* Style pour l'aperçu de l'image */
+    .preview-image {
+        max-width: 200px;
+        height: auto;
+    }
+
+    /* Style de la liste dans l'onglet Accueil */
+    .reglement-list {
+        padding-left: 30px; /* Décalage vers la droite */
+    }
+</style>
+</head>
+<body>
+
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'accueil')">Accueil</button>
+    <button class="tablinks" onclick="openTab(event, 'photo')">Photo</button>
+    <button class="tablinks" onclick="openTab(event, 'video')">Vidéo</button>
+</div>
+
+<div id="accueil" class="tabcontent">
+    <h1 style="font-family: 'Arial Black', sans-serif; font-size: 24px; margin-bottom: 20px;">Bienvenue sur le site de l'événement AFTER 2024</h1>
+    <p style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">Ce site web a été créé pour rassembler les moments forts de la soirée AFTER 2024, où nous célébrons la conclusion de notre dernière année scolaire.</p>
+    <p style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">Nous vous invitons à nous contacter si vous souhaitez contribuer au contenu de ce site.</p>
+    <p style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; margin-bottom: 15px;">Nous avons pris la décision d'organiser cette soirée dans le but de nous rassembler en comité restreint après le bal du lycée, afin de célébrer la conclusion de notre dernière année scolaire de la meilleure des manières.</p>
+    
+    <h2 style="font-family: 'Arial', sans-serif; font-size: 20px; margin-bottom: 15px;">Règlement :</h2>
+    <ul class="reglement-list" style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6;">
+        <li>Le paiement de l’entrée doit être effectué une semaine à l'avance.</li>
+        <li>L'accès est strictement réservé aux horaires d'ouverture définis.</li>
+        <li>La présentation d’une pièce d’identité ou de la carte de self est obligatoire.</li>
+        <li>Une ambiance festive et conviviale est encouragée.</li>
+        <li>La consommation d'alcool est autorisée dans le respect des lois en vigueur.</li>
+        <li>Toute altercation nuisant à l'ambiance sera sévèrement sanctionnée.</li>
+    </ul>
+    <p style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; margin-top: 20px;"><strong>IMPORTANT : En cas de dégradation entraînant la perte du chèque de caution, les frais seront à la charge de toutes les personnes présentes lors de la soirée.</strong></p>
+    <p style="font-family: 'Georgia', serif; font-size: 18px; line-height: 1.6; margin-top: 20px;">Nous vous remercions de votre soutien et de votre contribution à rendre cette soirée exceptionnelle.</p>   
+    <div class="instagram-link">
+        <a href="https://www.instagram.com/_esteb_tzt/" target="_blank">Contactez-nous</a>
+    </div>
+</div>
+
+<div id="photo" class="tabcontent">
+    <h2>Photos de l'événement</h2>
+    <img src="image-test.jpg" alt="Image de test" class="preview-image">
+    <a href="image-test.jpg" download class="btn-download">Télécharger</a>
+</div>
+
+<div id="video" class="tabcontent">
+    <h2>Vidéos de l'événement</h2>
+    <video width="320" height="240" controls>
+        <source src="Vidéo-test.MOV" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="Vidéo-test.MOV" download class="btn-download">Télécharger</a>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
